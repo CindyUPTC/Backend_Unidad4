@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "6b84bed1-3b1d-4ed3-8a08-1412fd26987a",
+		"name": "PROYECTO-FINAL",
+		"description": "Set de peticiones para probar el BackEnd de la API Rest del proyecto final de programacion III",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29104346"
+	},
+	"item": [
+		{
+			"name": "Obtener_Estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_Estudiante_x_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"primer_nombre_estudiante\": \"Cindy\", \r\n    \"segundo_nombre_estudiante\": \"\", \r\n    \"primer_apellido_estudiante\": \"Molina\", \r\n    \"segundo_apellido_estudiante\": \"Lancheros\",\r\n    \"correo_estudiante\": \"cindy.molina@uptc.edu.co\",\r\n    \"telefono_estudiante\": \"3208841153\",\r\n    \"programa_estudiante\": \"PROGRAMACION\",\r\n    \"id_grupo_estudiante\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar_Estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"primer_nombre_estudiante\": \"Cindy\", \r\n    \"segundo_nombre_estudiante\": \"\", \r\n    \"primer_apellido_estudiante\": \"Molina\", \r\n    \"segundo_apellido_estudiante\": \"Lancheros\",\r\n    \"correo_estudiante\": \"cindy.molina@uptc.edu.co\",\r\n    \"telefono_estudiante\": \"3208841153\",\r\n    \"programa_estudiante\": \"PROGRAMACION\",\r\n    \"id_grupo_estudiante\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_Estudiante",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar_Estudiantes_x_Grupo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/grupo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"grupo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar_Estudiantes_x_Programa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/estudiantes/programa/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"programa",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
