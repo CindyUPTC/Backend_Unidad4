@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "6b84bed1-3b1d-4ed3-8a08-1412fd26987a",
+		"_postman_id": "e2e8e8c0-2311-455f-ac37-bd5d585076ea",
 		"name": "PROYECTO-FINAL",
 		"description": "Set de peticiones para probar el BackEnd de la API Rest del proyecto final de programacion III",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29104346"
+		"_exporter_id": "33222004"
 	},
 	"item": [
 		{
@@ -54,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"primer_nombre_estudiante\": \"Cindy\", \r\n    \"segundo_nombre_estudiante\": \"\", \r\n    \"primer_apellido_estudiante\": \"Molina\", \r\n    \"segundo_apellido_estudiante\": \"Lancheros\",\r\n    \"correo_estudiante\": \"cindy.molina@uptc.edu.co\",\r\n    \"telefono_estudiante\": \"3208841153\",\r\n    \"programa_estudiante\": \"PROGRAMACION\",\r\n    \"id_grupo_estudiante\": \"1\"\r\n}",
+					"raw": "{\r\n    \"primer_nombre_estudiante\": \"Jane\", \r\n    \"segundo_nombre_estudiante\": \"\", \r\n    \"primer_apellido_estudiante\": \"Doe\", \r\n    \"segundo_apellido_estudiante\": \"Lorem\",\r\n    \"correo_estudiante\": \"estudiante@uptc.edu.co\",\r\n    \"telefono_estudiante\": \"3200000003\",\r\n    \"programa_estudiante\": \"PROGRAMACION\",\r\n    \"id_grupo_estudiante\": \"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,7 +83,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"primer_nombre_estudiante\": \"Cindy\", \r\n    \"segundo_nombre_estudiante\": \"\", \r\n    \"primer_apellido_estudiante\": \"Molina\", \r\n    \"segundo_apellido_estudiante\": \"Lancheros\",\r\n    \"correo_estudiante\": \"cindy.molina@uptc.edu.co\",\r\n    \"telefono_estudiante\": \"3208841153\",\r\n    \"programa_estudiante\": \"PROGRAMACION\",\r\n    \"id_grupo_estudiante\": \"1\"\r\n}",
+					"raw": "{\r\n    \"primer_nombre_estudiante\": \"Master\", \r\n    \"segundo_nombre_estudiante\": \"\", \r\n    \"primer_apellido_estudiante\": \"Ipsim\", \r\n    \"segundo_apellido_estudiante\": \"Lorem\",\r\n    \"correo_estudiante\": \"correoa@uptc.edu.co\",\r\n    \"telefono_estudiante\": \"32012345678\",\r\n    \"programa_estudiante\": \"PROGRAMACION\",\r\n    \"id_grupo_estudiante\": \"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
