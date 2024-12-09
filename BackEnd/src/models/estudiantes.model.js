@@ -1,4 +1,3 @@
-const { error } = require('console');
 const fs = require('fs');
 const path = require('path');
 const dbPath = path.join(__dirname, '../db/bd.json');
@@ -56,21 +55,26 @@ class Estudiantes {
      * 
      * Crea o guarda los nuevos estudiantes
      */
-    save() {
-        const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));    
-        const validaDuplicado = data.estudiantes.find(estudiante => estudiante.correo_estudiante === this.correo_estudiante);
-        if (validaDuplicado) {
-            return { error: 'Estudiante ya existe', estudiante: validaDuplicado };
+    async save() {
+        try {
+            const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+            const validaDuplicado = data.estudiantes.find(estudiante => estudiante.correo_estudiante === this.correo_estudiante);
+            if (validaDuplicado) {
+                return { error: 'Estudiante ya existe', estudiante: validaDuplicado };
+            }
+            const lastEstudiante = data.estudiantes[data.estudiantes.length - 1];
+            this.id_estudiante = lastEstudiante ? lastEstudiante.id_estudiante + 1 : 1;
+            const index = data.estudiantes.findIndex(estudiante => estudiante.id_estudiante === this.id_estudiante);
+            if (index !== -1) {
+                data.estudiantes[index] = this;
+            } else {
+                data.estudiantes.push(this);
+            }
+            fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+            return { message: 'Estudiante guardado correctamente' };
+        } catch (error) {
+            return { error: 'Error al guardar el estudiante' };
         }
-        const lastEstudiante = data.estudiantes[data.estudiantes.length - 1];
-        this.id_estudiante = lastEstudiante ? lastEstudiante.id_estudiante + 1 : 1;
-        const index = data.estudiantes.findIndex(estudiante => estudiante.id_estudiante === this.id_estudiante);
-        if (index !== -1) {
-            data.estudiantes[index] = this;
-        } else {
-            data.estudiantes.push(this);
-        }
-        fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
     }
 
     /**
@@ -123,5 +127,5 @@ class Estudiantes {
     }
 }
 
-//Exporta la clase
+// Exporta la clase
 module.exports = Estudiantes;

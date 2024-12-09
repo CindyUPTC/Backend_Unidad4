@@ -28,16 +28,22 @@ estudianteCtrl.getEstudiantes = async (req, res) => {
  */
 estudianteCtrl.createEstudiante = async (req, res) => {
     try {
-        const estudiante = new Estudiante(req.body);
-        const result = estudiante.save();
-        if (result.error) {
-            return res.status(400).json({ error: result.error, estudiante: result.estudiante });
-        }
-        res.status(201).json({ message: 'Estudiante creado exitosamente' });      
+      const estudiante = new Estudiante(req.body);
+      console.log('Datos del estudiante recibido:', req.body);
+      const result = await estudiante.save();
+      console.log('Resultado del guardado:', result);
+  
+      if (result.error) {
+        return res.status(400).json({ error: result.error, estudiante: result.estudiante });
+      }
+      res.status(201).json({ message: 'Estudiante creado exitosamente' });
     } catch (error) {
-        res.status(500).json({ error: 'Error al crear el estudiante'});
+      console.error('Error en createEstudiante:', error);
+      res.status(500).json({ error: 'Error al crear el estudiante' });
     }
-};
+  };
+  
+  
 
 
 /**
@@ -65,20 +71,22 @@ estudianteCtrl.getEstudianteById = async (req, res) => {
  */
 estudianteCtrl.updateEstudiante = async (req, res) => {
     try {
-        const { id } = req.params;
-        const estudiante = new Estudiante(req.body);
-        estudiante.id_estudiante = Number(id);       
-        const result = Estudiante.updateById(Number(id), estudiante);
-        console.log(result);
-        
-        if (!result) {
-            return res.status(404).json({ error: 'Estudiante no encontrado' });
-        }
-        res.status(200).json({ message: 'Estudiante actualizado exitosamente' });
+      const { id } = req.params;
+      const estudiante = new Estudiante(req.body);
+      estudiante.id_estudiante = Number(id);       
+      const result = Estudiante.updateById(Number(id), estudiante);
+  
+      if (!result) {
+        return res.status(404).json({ error: 'Estudiante no encontrado' });
+      }
+      res.status(200).json(estudiante);
     } catch (error) {
-        res.status(500).json({ error: 'Error al actualizar el estudiante' });
+      console.error('Error en updateEstudiante:', error);
+      res.status(500).json({ error: 'Error al actualizar el estudiante' });
     }
-};
+  };
+  
+
 
 /**
  * Eliminar estudiante
@@ -117,13 +125,16 @@ estudianteCtrl.getEstudiantesByGroup = async (req, res) => {
  */
 estudianteCtrl.getEstudiantesByProgram = async (req, res) => {
     try {
-        const { programa } = req.params;
-        const estudiantes = Estudiante.getByProgram(programa);
-        res.json(estudiantes);
+      const { id_programa } = req.params;
+      const estudiantes = Estudiante.getByProgram(Number(id_programa));
+      if (!estudiantes || estudiantes.length === 0) {
+        return res.status(404).json({ error: 'No se encontraron estudiantes para el programa especificado' });
+      }
+      res.status(200).json(estudiantes);
     } catch (error) {
-        res.status(500).json({ error: 'Error al obtener los estudiantes por programa' });
+      res.status(500).json({ error: 'Error al obtener los estudiantes por programa' });
     }
-};
-
+  };
+  
 //Exporta el modulo
 module.exports = estudianteCtrl;

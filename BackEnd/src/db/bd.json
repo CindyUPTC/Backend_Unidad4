@@ -1,3 +1,59 @@
 {
-  "estudiantes": []
+  "estudiantes": [
+    {
+      "id_estudiante": 2,
+      "primer_nombre_estudiante": "Ana",
+      "segundo_nombre_estudiante": "María",
+      "primer_apellido_estudiante": "Rodríguez",
+      "segundo_apellido_estudiante": "Sánchez",
+      "correo_estudiante": "ana.rodriguez@example.com",
+      "telefono_estudiante": "3002345678",
+      "id_programa_estudiante": 102,
+      "id_grupo_estudiante": 203
+    },
+    {
+      "id_estudiante": 3,
+      "primer_nombre_estudiante": "Juanito Actualizado",
+      "segundo_nombre_estudiante": "Carlos",
+      "primer_apellido_estudiante": "Perez",
+      "segundo_apellido_estudiante": "Lopez",
+      "correo_estudiante": "juanito.perez@correo.com",
+      "telefono_estudiante": "1234567890",
+      "id_programa_estudiante": 1,
+      "id_grupo_estudiante": 2
+    },
+    {
+      "id_estudiante": 4,
+      "primer_nombre_estudiante": "Luisa",
+      "segundo_nombre_estudiante": "Fernanda",
+      "primer_apellido_estudiante": "López",
+      "segundo_apellido_estudiante": "Vázquez",
+      "correo_estudiante": "luisa.lopez@example.com",
+      "telefono_estudiante": "3004567890",
+      "id_programa_estudiante": 104,
+      "id_grupo_estudiante": 205
+    },
+    {
+      "id_estudiante": 5,
+      "primer_nombre_estudiante": "Miguel",
+      "segundo_nombre_estudiante": "Ángel",
+      "primer_apellido_estudiante": "Hernández",
+      "segundo_apellido_estudiante": "Moreno",
+      "correo_estudiante": "miguel.hernandez@example.com",
+      "telefono_estudiante": "3005678901",
+      "id_programa_estudiante": 105,
+      "id_grupo_estudiante": 206
+    },
+    {
+      "id_estudiante": 6,
+      "primer_nombre_estudiante": "Daniel",
+      "segundo_nombre_estudiante": "Carlos",
+      "primer_apellido_estudiante": "Pérez",
+      "segundo_apellido_estudiante": "qsq",
+      "correo_estudiante": "daniel.asasd@example.com",
+      "telefono_estudiante": "1234501529",
+      "id_programa_estudiante": 1,
+      "id_grupo_estudiante": 100
+    }
+  ]
 }
