@@ -126,7 +126,7 @@ estudianteCtrl.getEstudiantesByGroup = async (req, res) => {
 estudianteCtrl.getEstudiantesByProgram = async (req, res) => {
     try {
       const { id_programa } = req.params;
-      const estudiantes = Estudiante.getByProgram(Number(id_programa));
+      const estudiantes = Estudiante.getByProgram(id_programa);
       if (!estudiantes || estudiantes.length === 0) {
         return res.status(404).json({ error: 'No se encontraron estudiantes para el programa especificado' });
       }

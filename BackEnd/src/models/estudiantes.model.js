@@ -19,14 +19,14 @@ class Estudiantes {
     ) 
     {
         this.id_estudiante = id_estudiante;
-        this.primer_nombre_estudiante = primer_nombre_estudiante || null;
-        this.segundo_nombre_estudiante = segundo_nombre_estudiante || null;
-        this.primer_apellido_estudiante = primer_apellido_estudiante || null;
-        this.segundo_apellido_estudiante = segundo_apellido_estudiante || null;
-        this.correo_estudiante = correo_estudiante || null;
-        this.telefono_estudiante = telefono_estudiante || null;
-        this.id_programa_estudiante = id_programa_estudiante || null;
-        this.id_grupo_estudiante = id_grupo_estudiante || null;
+        this.primer_nombre_estudiante = primer_nombre_estudiante ;
+        this.segundo_nombre_estudiante = segundo_nombre_estudiante ;
+        this.primer_apellido_estudiante = primer_apellido_estudiante ;
+        this.segundo_apellido_estudiante = segundo_apellido_estudiante ;
+        this.correo_estudiante = correo_estudiante ;
+        this.telefono_estudiante = telefono_estudiante ;
+        this.id_programa_estudiante = id_programa_estudiante ;
+        this.id_grupo_estudiante = id_grupo_estudiante ;
     }
 
     /**

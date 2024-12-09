@@ -8,7 +8,7 @@ app.use('/estudiantes', router); // Monta las rutas bajo el prefijo '/estudiante
 
 describe('GET /estudiantes/programa/:id_programa', () => {
   it('Debería devolver una lista de estudiantes por programa especificado', async () => {
-    const id_programa = 1; // Asegúrate de que este programa existe en tu base de datos
+    const id_programa = "tecnologia_regencia_farmacia";
     const response = await request(app)
       .get(`/estudiantes/programa/${id_programa}`)
       .expect('Content-Type', /json/)

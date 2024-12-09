@@ -8,7 +8,7 @@ app.use('/estudiantes', router); // Monta las rutas bajo el prefijo '/estudiante
 
 describe('GET /estudiantes/grupo/:id_grupo', () => {
     it('Debería devolver una lista de estudiantes por grupo especificado', async () => {
-      const id_grupo = 1;
+      const id_grupo = "GIA";
       const response = await request(app)
         .get(`/estudiantes/grupo/${id_grupo}`)  
         .expect('Content-Type', /json/)
